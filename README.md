@@ -48,6 +48,8 @@ Size of the blob. It is mandatory.
 Blob.random(size:200),
 ```
 
+![Basic blob](./screenshots/blob_light.jpg)
+
 &nbsp;
 
 > #### Blob shape settings
@@ -63,7 +65,7 @@ Blob.random(
 ),
 ```
 
-![Basic blob](./screenshots/blob_medium.png)
+![Basic blob](./screenshots/blob_normal.jpg)
 
 &nbsp;
 
@@ -118,6 +120,8 @@ Blob.fromHash(
 ),
 ```
 
+![Fixed blob](./screenshots/hash.gif)
+
 &nbsp;
 
 > #### Styles
@@ -136,12 +140,17 @@ Blob.random(
 ),
 ```
 
+![Custom color](./screenshots/color.jpg)
+
 Gradient can be Linear or Radial. `LinearGradient` will look like this,
 
 ```dart
 LinearGradient(colors: [Colors.red, Colors.green])
 .createShader(Rect.fromLTRB(0, 0, 300, 300))
 ```
+
+![Basic blob](./screenshots/blob_gradient.jpg)
+![Basic blob](./screenshots/blob_outline.jpg)
 
 &nbsp;
 
@@ -155,6 +164,8 @@ Blob.random(
   child: Text('I am a child!'),
 ),
 ```
+
+![Child](./screenshots/child.gif)
 
 &nbsp;
 
@@ -172,6 +183,8 @@ Blob.animatedRandom(
 ```
 
 `duration` is optional. Default is `500` milliseconds.
+
+![Animation](./screenshots/animated_basic.gif)
 
 &nbsp;
 
@@ -202,6 +215,8 @@ Blob.animatedFromHash(
 ),
 ```
 
+![Animate fixed blobs](./screenshots/animated_hash.gif)
+
 &nbsp;
 
 > #### Debug
@@ -214,6 +229,8 @@ Blob.random(
   debug: true,
 ),
 ```
+
+![Debug](./screenshots/debug.jpg)
 
 &nbsp;
 
@@ -229,6 +246,8 @@ Container(
       ),
 )
 ```
+
+![Animate fixed blobs](./screenshots/clipping.gif)
 
 &nbsp;
 

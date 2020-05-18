@@ -10,7 +10,7 @@ class StaticDebugExample extends StatelessWidget {
   Widget build(BuildContext context) {
     BlobController blobCtrl = BlobController();
     return AppShell(
-      title: 'Static Basic',
+      title: 'Debug',
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
