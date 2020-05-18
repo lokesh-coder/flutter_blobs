@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="./screenshots/blobs-logo.png" alt="Blobs" width="100"><br>
+  <img src="https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blobs-logo.png" alt="Blobs" width="100"><br>
 </h1>
 
 <h4 align="center">Create beautiful blob shapes with minimal code. Includes widgets, animations, clipper and services.</h4>
@@ -48,7 +48,7 @@ Size of the blob. It is mandatory.
 Blob.random(size:200),
 ```
 
-![Basic blob](./screenshots/blob_light.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_light.jpg)
 
 &nbsp;
 
@@ -65,7 +65,7 @@ Blob.random(
 ),
 ```
 
-![Basic blob](./screenshots/blob_normal.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_normal.jpg)
 
 &nbsp;
 
@@ -120,7 +120,7 @@ Blob.fromHash(
 ),
 ```
 
-![Fixed blob](./screenshots/hash.gif)
+![Fixed blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/hash.gif)
 
 &nbsp;
 
@@ -140,7 +140,7 @@ Blob.random(
 ),
 ```
 
-![Custom color](./screenshots/color.jpg)
+![Custom color](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/color.jpg)
 
 Gradient can be Linear or Radial. `LinearGradient` will look like this,
 
@@ -149,8 +149,8 @@ LinearGradient(colors: [Colors.red, Colors.green])
 .createShader(Rect.fromLTRB(0, 0, 300, 300))
 ```
 
-![Basic blob](./screenshots/blob_gradient.jpg)
-![Basic blob](./screenshots/blob_outline.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_gradient.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_outline.jpg)
 
 &nbsp;
 
@@ -165,7 +165,7 @@ Blob.random(
 ),
 ```
 
-![Child](./screenshots/child.gif)
+![Child](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/child.gif)
 
 &nbsp;
 
@@ -184,7 +184,7 @@ Blob.animatedRandom(
 
 `duration` is optional. Default is `500` milliseconds.
 
-![Animation](./screenshots/animated_basic.gif)
+![Animation](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/animated_basic.gif)
 
 &nbsp;
 
@@ -215,7 +215,7 @@ Blob.animatedFromHash(
 ),
 ```
 
-![Animate fixed blobs](./screenshots/animated_hash.gif)
+![Animate fixed blobs](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/animated_hash.gif)
 
 &nbsp;
 
@@ -230,7 +230,7 @@ Blob.random(
 ),
 ```
 
-![Debug](./screenshots/debug.jpg)
+![Debug](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/debug.jpg)
 
 &nbsp;
 
@@ -247,7 +247,7 @@ Container(
 )
 ```
 
-![Animate fixed blobs](./screenshots/clipping.gif)
+![Animate fixed blobs](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/clipping.gif)
 
 &nbsp;
 
