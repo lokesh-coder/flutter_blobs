@@ -133,7 +133,7 @@ Blob.random(
   size:200,
   styles: BlobStyles(
     color: Colors.green,
-    fillType: BlobFillType.STROKE,
+    fillType: BlobFillType.stroke,
     gradient: LinearGradient(),
     strokeWidth:3,
   ),
@@ -149,8 +149,8 @@ LinearGradient(colors: [Colors.red, Colors.green])
 .createShader(Rect.fromLTRB(0, 0, 300, 300))
 ```
 
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_gradient.jpg)
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_outline.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/gradient.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/outline.jpg)
 
 &nbsp;
 
