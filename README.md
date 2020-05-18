@@ -1,6 +1,11 @@
-# Blobs
+<h1 align="center">
+  <br>
+  <img src="./screenshots/blobs-logo.png" alt="Blobs" width="100"><br>
+</h1>
 
-Create beautiful blob shapes with minimal code. Includes widgets, animations, clipper and services.
+<h4 align="center">Create beautiful blob shapes with minimal code. Includes widgets, animations, clipper and services.</h4>
+
+# Blobs
 
 Blobs can be created from widgets, clippers and services.
 
@@ -21,8 +26,6 @@ Blobs can be created from widgets, clippers and services.
 - [Widgets](#widgets)
 - [Clipper](#clipper)
 - [Service](#service)
-
-&nbsp;
 
 ### Widgets
 
@@ -59,6 +62,8 @@ Blob.random(
   minGrowth:4,
 ),
 ```
+
+![Basic blob](./screenshots/blob_medium.png)
 
 &nbsp;
 
