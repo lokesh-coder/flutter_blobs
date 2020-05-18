@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:blobs/src/services/blob_error_handler.dart';
 import 'package:flutter/material.dart';
-import 'package:archive/archive.dart';
+import 'package:archive/archive.dart' show GZipEncoder, GZipDecoder;
 
 import 'package:blobs/src/models.dart';
 
