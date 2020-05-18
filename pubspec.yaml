@@ -1,0 +1,18 @@
+name: blobs
+description: Create beautiful blobs - fixed/random blob generation, animations, svgs and more
+version: 1.0.0
+author: Lokesh rajendran
+homepage: https://github.com/lokesh-coder/flutter_blobs
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=0.2.5 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pedantic: ^1.4.0
