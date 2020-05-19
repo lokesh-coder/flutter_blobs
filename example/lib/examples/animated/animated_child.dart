@@ -19,6 +19,7 @@ class AnimatedChildExample extends StatelessWidget {
               child: Blob.animatedRandom(
                 size: 400,
                 controller: blobCtrl,
+                styles: BlobStyles(color: Color(0xff182C61).withOpacity(0.05)),
                 child: Container(
                   padding: EdgeInsets.all(20),
                   child: Center(
@@ -26,20 +27,24 @@ class AnimatedChildExample extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'I\'m child',
+                          'Hello',
                           style: TextStyle(
                             fontSize: 33,
                             fontWeight: FontWeight.w800,
+                            color: Color(0xff182C61),
                           ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Text(
                           // ignore: lines_longer_than_80_chars
                           'Circular challenges and opportunities outcomes; initiative dynamic, theory of change because program areas strengthening..',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white60,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xff182C61).withOpacity(0.4),
                           ),
                         ),
                       ],

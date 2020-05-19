@@ -22,6 +22,7 @@ class StaticDebugExample extends StatelessWidget {
                 minGrowth: 2,
                 controller: blobCtrl,
                 debug: true,
+                styles: BlobStyles(color: Color(0xff182C61)),
               ),
             ),
             Button('Randomize', onTap: blobCtrl.change)

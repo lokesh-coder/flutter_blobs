@@ -19,7 +19,7 @@ class StaticColorExample extends StatelessWidget {
               child: Blob.random(
                 size: 400,
                 controller: blobCtrl,
-                styles: BlobStyles(color: Color(0xffcb2d3e)),
+                styles: BlobStyles(color: Color(0xffEAB543)),
               ),
             ),
             Button('Randomize', onTap: () {

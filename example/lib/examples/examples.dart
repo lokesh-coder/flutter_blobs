@@ -1,3 +1,5 @@
+import 'package:example/examples/static/static_color.dart';
+import 'package:example/examples/static/static_stroke.dart';
 import 'package:flutter/material.dart';
 import '../common/app_shell.dart';
 import '../common/link.dart';
@@ -35,14 +37,15 @@ class Examples extends StatelessWidget {
             Link('Animated-Fixed Multiple Hash', AnimatedMultipleHashExample()),
             Link('Animated-Custom color', AnimatedColorExample()),
             Link('Animated-Loop', AnimatedLoopExample()),
-            Link(' Basic blob', StaticBasicExample()),
+            Link('Basic blob', StaticBasicExample()),
             Link('Basic with child', StaticBasicExample()),
             Link('Debug', StaticDebugExample()),
             Link('Gradient', StaticGradientExample()),
-            Link('Outline blob', StaticGradientExample()),
+            Link('Outline blob', StaticStrokeExample()),
             Link('Fixed blob', StaticHashExample()),
             Link('Fixed Multiple Hash', StaticHashExample()),
-            Link('Custom color', StaticClipperExample()),
+            Link('Custom color', StaticColorExample()),
+            Link('Clipper', StaticClipperExample()),
           ],
         ),
       ),

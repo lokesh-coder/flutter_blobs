@@ -124,6 +124,7 @@ class _AnimatedBlobState extends State<AnimatedBlob>
   @override
   void dispose() {
     if (widget.ctrl != null) widget.ctrl.dispose();
+    _animationController.dispose();
     super.dispose();
   }
 }

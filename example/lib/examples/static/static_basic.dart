@@ -10,7 +10,7 @@ class StaticBasicExample extends StatelessWidget {
   Widget build(BuildContext context) {
     BlobController blobCtrl = BlobController();
     return AppShell(
-      title: 'Static Basic',
+      title: 'Basic Shape',
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

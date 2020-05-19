@@ -48,7 +48,7 @@ Size of the blob. It is mandatory.
 Blob.random(size:200),
 ```
 
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_light.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_shape_2.jpg)
 
 &nbsp;
 
@@ -65,7 +65,9 @@ Blob.random(
 ),
 ```
 
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_normal.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_shape_1.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_shape_3.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_shape_4.jpg)
 
 &nbsp;
 
@@ -120,8 +122,6 @@ Blob.fromHash(
 ),
 ```
 
-![Fixed blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/hash.gif)
-
 &nbsp;
 
 > #### Styles
@@ -150,7 +150,7 @@ LinearGradient(colors: [Colors.red, Colors.green])
 ```
 
 ![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/gradient.jpg)
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/outline.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/stroke.jpg)
 
 &nbsp;
 
@@ -165,7 +165,7 @@ Blob.random(
 ),
 ```
 
-![Child](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/child.gif)
+![Child](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/child.jpg)
 
 &nbsp;
 
@@ -184,7 +184,7 @@ Blob.animatedRandom(
 
 `duration` is optional. Default is `500` milliseconds.
 
-![Animation](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/animated_basic.gif)
+![Animation](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/basic_animation.gif)
 
 &nbsp;
 
@@ -201,6 +201,8 @@ Blob.animatedRandom(
 ),
 ```
 
+![Animation](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/loop.gif)
+
 &nbsp;
 
 > #### Animate Fixed shapes
@@ -215,7 +217,7 @@ Blob.animatedFromHash(
 ),
 ```
 
-![Animate fixed blobs](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/animated_hash.gif)
+![Animate fixed blobs](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/multiple_hash.gif)
 
 &nbsp;
 
@@ -247,7 +249,7 @@ Container(
 )
 ```
 
-![Animate fixed blobs](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/clipping.gif)
+![Clipper](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/clip.gif)
 
 &nbsp;
 

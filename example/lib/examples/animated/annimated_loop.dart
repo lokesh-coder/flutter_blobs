@@ -18,6 +18,7 @@ class AnimatedLoopExample extends StatelessWidget {
                 size: 400,
                 loop: true,
                 edgesCount: 6,
+                styles: BlobStyles(color: Color(0xffB33771)),
               ),
             ),
           ],

@@ -20,6 +20,7 @@ class AnimatedBasicExample extends StatelessWidget {
               child: Blob.animatedRandom(
                 size: 400,
                 controller: blobCtrl,
+                styles: BlobStyles(color: Color(0xffc44569)),
               ),
             ),
             Button('Randomize', onTap: () {

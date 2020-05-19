@@ -1,4 +1,5 @@
 import 'package:blobs/blobs.dart';
+import 'package:example/examples/examples.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
@@ -14,13 +15,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.manropeTextTheme(
           Theme.of(context).textTheme.apply(
-                bodyColor: Color(0xffd2dae2),
-                displayColor: Colors.pink,
+                bodyColor: Color(0xff596275),
               ),
         ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BasicExample(), // Examples() for all demo
+      home: Examples(), // Examples() for all demo
     );
   }
 }

@@ -10,7 +10,7 @@ class Button extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
       child: FlatButton(
-        color: Color(0xff596275),
+        color: Color(0xff303952),
         onPressed: onTap,
         padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
         child: Text(
