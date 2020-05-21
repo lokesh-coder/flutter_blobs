@@ -1,4 +1,5 @@
 import 'package:example/examples/static/static_color.dart';
+import 'package:example/examples/static/static_multiple_hash.dart';
 import 'package:example/examples/static/static_stroke.dart';
 import 'package:flutter/material.dart';
 import '../common/app_shell.dart';
@@ -17,6 +18,7 @@ import 'static/static_clipper.dart';
 import 'static/static_debug.dart';
 import 'static/static_gradient.dart';
 import 'static/static_hash.dart';
+import 'inspirations/rotate.dart';
 
 class Examples extends StatelessWidget {
   const Examples({Key key}) : super(key: key);
@@ -28,6 +30,7 @@ class Examples extends StatelessWidget {
       child: Container(
         child: ListView(
           children: [
+            Link('Insipation - rotate', RotateInpirationExample()),
             Link('Animated - Basic blob', AnimatedBasicExample()),
             Link('Animated-Basic with child', AnimatedChildExample()),
             Link('Animated-Debug', AnimatedDebugExample()),
@@ -43,7 +46,7 @@ class Examples extends StatelessWidget {
             Link('Gradient', StaticGradientExample()),
             Link('Outline blob', StaticStrokeExample()),
             Link('Fixed blob', StaticHashExample()),
-            Link('Fixed Multiple Hash', StaticHashExample()),
+            Link('Fixed Multiple Hash', StaticMultipleHashExample()),
             Link('Custom color', StaticColorExample()),
             Link('Clipper', StaticClipperExample()),
           ],

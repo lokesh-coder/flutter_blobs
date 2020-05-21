@@ -18,8 +18,8 @@ class AnimatedDebugExample extends StatelessWidget {
             Container(
               child: Blob.animatedRandom(
                 size: 300,
-                edgesCount: 8,
-                minGrowth: 2,
+                edgesCount: 6,
+                minGrowth: 3,
                 controller: blobCtrl,
                 debug: true,
               ),

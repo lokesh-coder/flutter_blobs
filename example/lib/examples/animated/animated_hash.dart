@@ -17,9 +17,7 @@ class AnimatedHashExample extends StatelessWidget {
           children: [
             Container(
               child: Blob.animatedFromHash(
-                hash: [
-                  'H4sIANhSwV4A/w3LsQ0AMQgEwYY24A5koBbr+2/jnY40NzdxBD7GPagXrznzKKlFbjSBJDKKs9QLE98PNkNQxj0AAAA='
-                ],
+                hash: ['6-3-372642'],
                 size: 400,
                 controller: blobCtrl,
               ),

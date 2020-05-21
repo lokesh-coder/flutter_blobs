@@ -4,38 +4,37 @@ class BlobDots {
   final List<List<Offset>> dots;
   final double innerRad;
   final num originalSize;
+  final num hash;
 
-  BlobDots({this.dots, this.innerRad, this.originalSize});
+  BlobDots({this.dots, this.innerRad, this.originalSize, this.hash});
 }
 
 class BlobData {
-  final List<List<Offset>> dots;
-  final double innerRad;
-  final String svgPath;
-  final BlobPainterCoords coords;
-  final String hash;
-  final int edgesCount;
-  final int minGrowth;
-  final Size size;
-  final num originalSize;
+  int growth;
+  num size;
+  int edges;
+  BlobPoints points;
+  String id;
+  Path path;
+  String svgPath;
+  BlobCurves curves;
 
   BlobData({
-    this.dots,
-    this.innerRad,
-    this.svgPath,
-    this.coords,
-    this.hash,
-    this.edgesCount,
-    this.minGrowth,
+    this.growth,
     this.size,
-    this.originalSize,
+    this.edges,
+    this.points,
+    this.id,
+    this.path,
+    this.svgPath,
+    this.curves,
   });
 }
 
-class BlobPainterCoords {
+class BlobCurves {
   final Offset start;
   final List<List<double>> curves;
-  BlobPainterCoords(this.start, this.curves);
+  BlobCurves(this.start, this.curves);
 }
 
 enum BlobFillType { fill, stroke }
@@ -50,5 +49,20 @@ class BlobStyles {
     this.gradient,
     this.fillType,
     this.strokeWidth,
+  });
+}
+
+class BlobPoints {
+  List<Offset> originPoints;
+  List<Offset> destPoints;
+  Offset center;
+  double innerRad;
+  String id;
+  BlobPoints({
+    this.originPoints,
+    this.destPoints,
+    this.center,
+    this.id,
+    this.innerRad,
   });
 }

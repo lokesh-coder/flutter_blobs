@@ -55,7 +55,7 @@ point(Canvas canvas, Offset center) {
   canvas.drawPath(path, paint);
 }
 
-path(Canvas canvas, BlobData data, {BlobStyles styles}) {
+Paint createPaint(BlobStyles styles) {
   Map<BlobFillType, PaintingStyle> fillType = {
     BlobFillType.fill: PaintingStyle.fill,
     BlobFillType.stroke: PaintingStyle.stroke
@@ -68,22 +68,22 @@ path(Canvas canvas, BlobData data, {BlobStyles styles}) {
   paint.strokeWidth = (styles.strokeWidth ?? BlobConfig.strokeWidth).toDouble();
   paint.style = fillType[styles.fillType ?? BlobConfig.fillType];
 
-  Path path = shape(data);
-  // canvas.drawShadow(path, Colors.red.withOpacity(0.8), 10, true);
-  if (data.originalSize != null && (data.originalSize != data.size.width)) {
-    canvas.scale(data.size.width / data.originalSize);
-  }
-
-  canvas.drawPath(path, paint);
-  return path;
+  return paint;
 }
 
-Path shape(BlobData data) {
+Path connectPoints(BlobCurves curves) {
   var path = Path();
-  path.moveTo(data.coords.start.dx, data.coords.start.dy);
-  data.coords.curves.forEach((curve) {
+  path.moveTo(curves.start.dx, curves.start.dy);
+  curves.curves.forEach((curve) {
     path.quadraticBezierTo(curve[0], curve[1], curve[2], curve[3]);
   });
   path.close();
+
   return path;
+}
+
+void drawBlob(Canvas canvas, Path path, BlobStyles styles) {
+  Paint paint = createPaint(styles);
+  // canvas.drawShadow(path, Colors.red.withOpacity(0.8), 10, true);
+  canvas.drawPath(path, paint);
 }

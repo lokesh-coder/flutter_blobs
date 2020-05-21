@@ -7,8 +7,8 @@ class BlobController {
     _listener = ex;
   }
 
-  change() {
-    if (_listener == null) return;
+  BlobData change() {
+    if (_listener == null) return BlobData();
     return _listener();
   }
 

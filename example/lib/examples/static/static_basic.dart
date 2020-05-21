@@ -18,11 +18,15 @@ class StaticBasicExample extends StatelessWidget {
             Container(
               child: Blob.random(
                 size: 400,
+                edgesCount: 5,
+                minGrowth: 7,
                 controller: blobCtrl,
+                debug: true,
               ),
             ),
             Button('Randomize', onTap: () {
-              blobCtrl.change();
+              BlobData blobData = blobCtrl.change();
+              print('${blobData.id}');
             })
           ],
         ),

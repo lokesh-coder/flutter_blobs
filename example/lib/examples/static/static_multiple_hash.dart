@@ -15,41 +15,23 @@ class StaticMultipleHashExample extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Blob.fromHash(
-                  hash: [
-                    'H4sIAB5VwV4A/w3KwQ0AMQjEwIb8YNmQcLWc0n8b4WWN5N8lMgJn4jLqcZvck8URcqPaFPkFfVizd9wHDGCsqzsAAAA=',
-                  ],
-                  size: 50,
-                ),
-                Blob.fromHash(
-                  hash: [
-                    'H4sIADZVwV4A/w3KsREAMQjEwIYU3IENdi2e77+NJ9hEo5cuQiLaxBXuRXrcSQer8N6jOKSCTtb8R98PT0B1nTwAAAA='
-                  ],
-                  size: 50,
-                ),
-                Blob.fromHash(
-                  hash: [
-                    'H4sIAEFVwV4A/w3LsRHAQAjEwIYUHIcf+Fo87r8NE2wmvXkLS6TXEVEmq+jG55JNOIhZMXjrEc8Oo+8H5uyPHz0AAAA='
-                  ],
-                  size: 50,
-                ),
-              ],
-            ),
-            SizedBox(height: 30),
             Container(
               child: Blob.fromHash(
-                hash: [
-                  'H4sIAB5VwV4A/w3KwQ0AMQjEwIb8YNmQcLWc0n8b4WWN5N8lMgJn4jLqcZvck8URcqPaFPkFfVizd9wHDGCsqzsAAAA=',
-                  'H4sIADZVwV4A/w3KsREAMQjEwIYU3IENdi2e77+NJ9hEo5cuQiLaxBXuRXrcSQer8N6jOKSCTtb8R98PT0B1nTwAAAA=',
-                  'H4sIAEFVwV4A/w3LsRHAQAjEwIYUHIcf+Fo87r8NE2wmvXkLS6TXEVEmq+jG55JNOIhZMXjrEc8Oo+8H5uyPHz0AAAA='
-                ],
-                size: 400,
+                hash: ['6-3-22556', '6-3-90151', '6-3-79206'],
+                size: 300,
                 controller: blobCtrl,
               ),
             ),
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Blob.fromHash(hash: ['6-3-22556'], size: 50),
+                Blob.fromHash(hash: ['6-3-90151'], size: 50),
+                Blob.fromHash(hash: ['6-3-79206'], size: 50),
+              ],
+            ),
+            SizedBox(height: 30),
             Button('Randomize', onTap: () {
               blobCtrl.change();
             })

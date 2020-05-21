@@ -48,7 +48,7 @@ Size of the blob. It is mandatory.
 Blob.random(size:200),
 ```
 
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_shape_2.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/basic_shape_2.jpg)
 
 &nbsp;
 
@@ -65,9 +65,9 @@ Blob.random(
 ),
 ```
 
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_shape_1.jpg)
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_shape_3.jpg)
-![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/blob_shape_4.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/basic_shape_1.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/basic_shape_3.jpg)
+![Basic blob](https://raw.githubusercontent.com/lokesh-coder/flutter_blobs/develop/screenshots/basic_shape_4.jpg)
 
 &nbsp;
 

@@ -15,14 +15,16 @@ class BlobPainter extends CustomPainter {
 
   @override
   void paint(Canvas c, Size s) {
-    path(c, blobData, styles: styles);
+    drawBlob(c, blobData.path, styles);
     if (debug) {
       circle(c, s, (s.width / 2)); // outer circle
-      circle(c, s, blobData.innerRad); // inner circle
+      circle(c, s, blobData.points.innerRad); // inner circle
       point(c, Offset(s.width / 2, s.height / 2)); // center point
-      blobData.dots.forEach(
-        (dot) => drawLines(c, dot[0], dot[1]),
-      ); // line from  inner  circle to blob point
+      List originPoints = blobData.points.originPoints;
+      List destPoints = blobData.points.destPoints;
+      originPoints.asMap().forEach(
+            (i, p) => drawLines(c, p, destPoints[i]),
+          ); // line from  inner  circle to blob point
     }
   }
 

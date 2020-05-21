@@ -21,7 +21,7 @@ class BlobClipper extends CustomClipper<Path> {
       minGrowth: minGrowth,
       size: size,
     ).generate();
-    return shape(blobData);
+    return connectPoints(blobData.curves);
   }
 
   @override

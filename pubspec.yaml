@@ -1,6 +1,6 @@
 name: blobs
 description: Create beautiful blobs - fixed/random blob generation, animations, svgs and more
-version: 1.0.0+2
+version: 1.1.0
 homepage: https://github.com/lokesh-coder/flutter_blobs
 
 environment:
@@ -10,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  archive: ^2.0.13
 
 dev_dependencies:
   flutter_test:

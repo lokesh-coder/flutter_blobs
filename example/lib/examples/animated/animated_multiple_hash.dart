@@ -27,36 +27,30 @@ class _AnimatedMultipleHashExampleState
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Blob.animatedFromHash(
-                  hash: [
-                    'H4sIAB5VwV4A/w3KwQ0AMQjEwIb8YNmQcLWc0n8b4WWN5N8lMgJn4jLqcZvck8URcqPaFPkFfVizd9wHDGCsqzsAAAA=',
-                  ],
+                  hash: ['6-3-22556'],
                   styles: BlobStyles(
                     color: Color(0xff596275).withOpacity(0.5),
                     fillType: BlobFillType.stroke,
-                    strokeWidth: 20,
+                    strokeWidth: 2,
                   ),
                   size: 50,
                 ),
                 Blob.animatedFromHash(
-                  hash: [
-                    'H4sIADZVwV4A/w3KsREAMQjEwIYU3IENdi2e77+NJ9hEo5cuQiLaxBXuRXrcSQer8N6jOKSCTtb8R98PT0B1nTwAAAA='
-                  ],
+                  hash: ['6-3-90151'],
                   size: 50,
                   styles: BlobStyles(
                     color: Color(0xff596275).withOpacity(0.5),
                     fillType: BlobFillType.stroke,
-                    strokeWidth: 20,
+                    strokeWidth: 2,
                   ),
                 ),
                 Blob.animatedFromHash(
-                  hash: [
-                    'H4sIAEFVwV4A/w3LsRHAQAjEwIYUHIcf+Fo87r8NE2wmvXkLS6TXEVEmq+jG55JNOIhZMXjrEc8Oo+8H5uyPHz0AAAA='
-                  ],
+                  hash: ['6-3-79206'],
                   size: 50,
                   styles: BlobStyles(
                     color: Color(0xff596275).withOpacity(0.5),
                     fillType: BlobFillType.stroke,
-                    strokeWidth: 20,
+                    strokeWidth: 2,
                   ),
                 ),
               ],
@@ -64,11 +58,7 @@ class _AnimatedMultipleHashExampleState
             SizedBox(height: 30),
             Container(
               child: Blob.animatedFromHash(
-                hash: [
-                  'H4sIAB5VwV4A/w3KwQ0AMQjEwIb8YNmQcLWc0n8b4WWN5N8lMgJn4jLqcZvck8URcqPaFPkFfVizd9wHDGCsqzsAAAA=',
-                  'H4sIADZVwV4A/w3KsREAMQjEwIYU3IENdi2e77+NJ9hEo5cuQiLaxBXuRXrcSQer8N6jOKSCTtb8R98PT0B1nTwAAAA=',
-                  'H4sIAEFVwV4A/w3LsRHAQAjEwIYUHIcf+Fo87r8NE2wmvXkLS6TXEVEmq+jG55JNOIhZMXjrEc8Oo+8H5uyPHz0AAAA='
-                ],
+                hash: ['6-3-22556', '6-3-90151', '6-3-79206'],
                 size: 400,
                 controller: blobCtrl,
                 styles: BlobStyles(color: Color(0xff34ace0)),

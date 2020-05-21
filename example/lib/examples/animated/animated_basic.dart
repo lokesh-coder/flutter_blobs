@@ -24,8 +24,8 @@ class AnimatedBasicExample extends StatelessWidget {
               ),
             ),
             Button('Randomize', onTap: () {
-              BlobData foo = blobCtrl.change();
-              print(foo.svgPath);
+              BlobData blobData = blobCtrl.change();
+              print(blobData);
             })
           ],
         ),
