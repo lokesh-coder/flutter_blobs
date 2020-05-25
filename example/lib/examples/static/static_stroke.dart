@@ -1,6 +1,5 @@
 import 'package:blobs/blobs.dart';
 import '../../common/app_shell.dart';
-import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class StaticStrokeExample extends StatelessWidget {
@@ -25,9 +24,9 @@ class StaticStrokeExample extends StatelessWidget {
                 ),
               ),
             ),
-            Button('Randomize', onTap: () {
-              blobCtrl.change();
-            })
+            // Button('Randomize', onTap: () {
+            //   blobCtrl.change();
+            // })
           ],
         ),
       ),

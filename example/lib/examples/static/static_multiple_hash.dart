@@ -16,8 +16,8 @@ class StaticMultipleHashExample extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              child: Blob.fromHash(
-                hash: ['6-3-22556', '6-3-90151', '6-3-79206'],
+              child: Blob.fromID(
+                id: ['6-3-22556', '6-3-90151', '6-3-79206'],
                 size: 300,
                 controller: blobCtrl,
               ),
@@ -26,9 +26,9 @@ class StaticMultipleHashExample extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Blob.fromHash(hash: ['6-3-22556'], size: 50),
-                Blob.fromHash(hash: ['6-3-90151'], size: 50),
-                Blob.fromHash(hash: ['6-3-79206'], size: 50),
+                Blob.fromID(id: ['6-3-22556'], size: 50),
+                Blob.fromID(id: ['6-3-90151'], size: 50),
+                Blob.fromID(id: ['6-3-79206'], size: 50),
               ],
             ),
             SizedBox(height: 30),

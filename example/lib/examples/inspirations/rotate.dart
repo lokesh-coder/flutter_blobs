@@ -2,7 +2,6 @@ import 'package:blobs/blobs.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/app_shell.dart';
-import '../../common/button.dart';
 
 class RotateInpirationExample extends StatefulWidget {
   const RotateInpirationExample({Key key}) : super(key: key);
@@ -44,10 +43,9 @@ class _RotateInpirationExampleState extends State<RotateInpirationExample>
                 children: [
                   Transform.rotate(
                     angle: (animation.value * 0.6) * 360.0,
-                    child: Blob.fromHash(
-                      size: 170,
-                      // hash: ['5-7-68346', '5-7-34659', '6-7-63530'],
-                      hash: ['5-7-34659'],
+                    child: Blob.fromID(
+                      size: 190,
+                      id: ['6-8-34659'],
                       styles: BlobStyles(
                         color: Color(0xffff6b81).withOpacity(0.2),
                         fillType: BlobFillType.fill,
@@ -56,10 +54,9 @@ class _RotateInpirationExampleState extends State<RotateInpirationExample>
                   ),
                   Transform.rotate(
                     angle: animation.value * 360.0,
-                    child: Blob.fromHash(
+                    child: Blob.fromID(
                       size: 200,
-                      // hash: ['5-7-68346', '5-7-70642', '6-7-63530'],
-                      hash: ['5-7-68346'],
+                      id: ['6-8-6090'],
                       styles: BlobStyles(
                         color: Color(0xffFC427B),
                         fillType: BlobFillType.stroke,
@@ -68,10 +65,9 @@ class _RotateInpirationExampleState extends State<RotateInpirationExample>
                   ),
                   Transform.rotate(
                     angle: (animation.value * 0.4) * 360.0,
-                    child: Blob.fromHash(
+                    child: Blob.fromID(
                       size: 200,
-                      // hash: ['5-7-68346', '5-7-34659', '6-7-63530'],
-                      hash: ['5-7-33'],
+                      id: ['6-8-115566'],
                       styles: BlobStyles(
                         color: Color(0xffB33771),
                         fillType: BlobFillType.stroke,

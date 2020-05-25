@@ -4,11 +4,11 @@ import 'package:blobs/src/services/blob_generator.dart';
 import 'package:flutter/material.dart';
 
 class BlobClipper extends CustomClipper<Path> {
-  final String hash;
+  final String id;
   final int edgesCount;
   final int minGrowth;
   BlobClipper({
-    this.hash,
+    this.id,
     this.edgesCount = BlobConfig.edgesCount,
     this.minGrowth = BlobConfig.minGrowth,
   });
@@ -16,7 +16,7 @@ class BlobClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     var blobData = BlobGenerator(
-      hash: hash,
+      id: id,
       edgesCount: edgesCount,
       minGrowth: minGrowth,
       size: size,

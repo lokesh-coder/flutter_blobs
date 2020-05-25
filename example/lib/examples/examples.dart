@@ -1,3 +1,4 @@
+import 'package:example/examples/static/static_child.dart';
 import 'package:example/examples/static/static_color.dart';
 import 'package:example/examples/static/static_multiple_hash.dart';
 import 'package:example/examples/static/static_stroke.dart';
@@ -19,6 +20,8 @@ import 'static/static_debug.dart';
 import 'static/static_gradient.dart';
 import 'static/static_hash.dart';
 import 'inspirations/rotate.dart';
+import 'inspirations/frame.dart';
+import 'inspirations/bottomclip.dart';
 
 class Examples extends StatelessWidget {
   const Examples({Key key}) : super(key: key);
@@ -31,6 +34,8 @@ class Examples extends StatelessWidget {
         child: ListView(
           children: [
             Link('Insipation - rotate', RotateInpirationExample()),
+            Link('Insipation - frame', FrameInspirationExample()),
+            Link('Insipation - bottomclip', BottomClipInspirationExample()),
             Link('Animated - Basic blob', AnimatedBasicExample()),
             Link('Animated-Basic with child', AnimatedChildExample()),
             Link('Animated-Debug', AnimatedDebugExample()),
@@ -41,7 +46,7 @@ class Examples extends StatelessWidget {
             Link('Animated-Custom color', AnimatedColorExample()),
             Link('Animated-Loop', AnimatedLoopExample()),
             Link('Basic blob', StaticBasicExample()),
-            Link('Basic with child', StaticBasicExample()),
+            Link('Basic with child', StaticChildExample()),
             Link('Debug', StaticDebugExample()),
             Link('Gradient', StaticGradientExample()),
             Link('Outline blob', StaticStrokeExample()),

@@ -16,8 +16,8 @@ class AnimatedHashExample extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              child: Blob.animatedFromHash(
-                hash: ['6-3-372642'],
+              child: Blob.animatedFromID(
+                id: ['6-3-372642'],
                 size: 400,
                 controller: blobCtrl,
               ),

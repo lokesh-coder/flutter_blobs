@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
 
-class BlobDots {
-  final List<List<Offset>> dots;
-  final double innerRad;
-  final num originalSize;
-  final num hash;
-
-  BlobDots({this.dots, this.innerRad, this.originalSize, this.hash});
-}
-
 class BlobData {
   int growth;
   num size;
@@ -34,7 +25,8 @@ class BlobData {
 class BlobCurves {
   final Offset start;
   final List<List<double>> curves;
-  BlobCurves(this.start, this.curves);
+  final List<Offset> breakpoints;
+  BlobCurves(this.start, this.curves, this.breakpoints);
 }
 
 enum BlobFillType { fill, stroke }

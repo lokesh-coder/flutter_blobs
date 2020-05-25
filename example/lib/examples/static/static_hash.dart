@@ -16,8 +16,8 @@ class StaticHashExample extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              child: Blob.fromHash(
-                hash: ['6-3-41596'],
+              child: Blob.fromID(
+                id: ['13-3-685797'],
                 size: 400,
                 controller: blobCtrl,
               ),

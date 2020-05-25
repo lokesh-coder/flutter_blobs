@@ -1,10 +1,10 @@
-class InvalidHashIDException implements Exception {
-  final String hashID;
+class InvalidIDException implements Exception {
+  final String id;
 
-  InvalidHashIDException(this.hashID);
+  InvalidIDException(this.id);
   @override
   String toString() {
-    return "Invalid hash ID - $hashID";
+    return "Invalid ID - $id";
   }
 }
 

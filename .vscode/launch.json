@@ -9,7 +9,7 @@
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug",
-      "program": "demo/lib/main.dart"
+      "program": "example/lib/main.dart"
     }
   ]
 }

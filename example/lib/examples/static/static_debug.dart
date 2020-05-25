@@ -1,6 +1,5 @@
 import 'package:blobs/blobs.dart';
 import '../../common/app_shell.dart';
-import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class StaticDebugExample extends StatelessWidget {
@@ -22,10 +21,10 @@ class StaticDebugExample extends StatelessWidget {
                 minGrowth: 2,
                 controller: blobCtrl,
                 debug: true,
-                styles: BlobStyles(color: Color(0xff182C61)),
+                styles: BlobStyles(color: Color(0xffd1d8e0)),
               ),
             ),
-            Button('Randomize', onTap: blobCtrl.change)
+            // Button('Randomize', onTap: blobCtrl.change)
           ],
         ),
       ),

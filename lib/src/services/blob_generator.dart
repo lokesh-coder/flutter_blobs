@@ -10,26 +10,26 @@ class BlobGenerator {
   int edgesCount;
   int minGrowth;
   String svgPath = '';
-  String hash;
+  String id;
   List<List<Offset>> dots = [];
 
   BlobGenerator({
-    this.hash,
+    this.id,
     this.edgesCount,
     this.minGrowth,
     this.size,
   });
 
   BlobData generate() {
-    if (hash != null) {
-      var datum = hash.split('-');
-      if (datum.length != 3) throw InvalidHashIDException(hash);
+    if (id != null) {
+      var datum = id.split('-');
+      if (datum.length != 3) throw InvalidIDException(id);
       edgesCount = int.parse(datum[0]);
       minGrowth = int.parse(datum[1]);
-      hash = datum[2];
+      id = datum[2];
     }
     if (edgesCount <= 2) throw InvalidEdgesCountException();
-    var points = _createPoints(hash != null ? int.parse(hash) : null);
+    var points = _createPoints(id != null ? int.parse(id) : null);
     BlobCurves curves = _createCurves(points.destPoints);
     Path path = connectPoints(curves);
     return BlobData(
@@ -105,13 +105,13 @@ class BlobGenerator {
     Offset center = Offset(size.width / 2, size.height / 2);
 
     List<double> slices = _divide(edgesCount);
-    int id;
-    if (hash != null) {
-      seedValue = int.parse(hash);
+    int randomInt;
+    if (id != null) {
+      seedValue = int.parse(id);
     } else {
       int maxRandomValue = ([99, 999, 9999, 99999, 999999]..shuffle()).first;
-      id = Random().nextInt(maxRandomValue);
-      seedValue = id;
+      randomInt = Random().nextInt(maxRandomValue);
+      seedValue = randomInt;
     }
     var randVal = _randomDoubleGenerator(seedValue);
     List<Offset> originPoints = [];
@@ -128,7 +128,7 @@ class BlobGenerator {
       originPoints: originPoints,
       destPoints: destPoints,
       center: center,
-      id: id == null ? null : '$edgesCount-$minGrowth-$id',
+      id: randomInt == null ? null : '$edgesCount-$minGrowth-$id',
       innerRad: innerRad.toDouble(),
     );
   }
@@ -157,18 +157,21 @@ class BlobGenerator {
 
   BlobCurves _createCurves(List<Offset> points) {
     List<List<double>> curves = [];
+    List<Offset> breakpoints = [];
     Offset mid = (points[0] + points[1]) / 2;
+    breakpoints.add(mid);
     svgPath += 'M${mid.dx},${mid.dy}';
 
     for (var i = 0; i < points.length; i++) {
       var p1 = points[(i + 1) % points.length];
       var p2 = points[(i + 2) % points.length];
       mid = (p1 + p2) / 2;
+      breakpoints.add(mid);
 
       svgPath += 'Q${p1.dx},${p1.dy},${mid.dx},${mid.dy}';
       curves.add([p1.dx, p1.dy, mid.dx, mid.dy]);
     }
     svgPath += 'Z';
-    return BlobCurves(mid, curves);
+    return BlobCurves(mid, curves, breakpoints);
   }
 }

@@ -1,6 +1,5 @@
 import 'package:blobs/blobs.dart';
 import '../../common/app_shell.dart';
-import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class StaticBasicExample extends StatelessWidget {
@@ -10,27 +9,31 @@ class StaticBasicExample extends StatelessWidget {
   Widget build(BuildContext context) {
     BlobController blobCtrl = BlobController();
     return AppShell(
-      title: 'Basic Shape',
+      title: 'Random Blob Shapes',
       child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
+        child: GridView.builder(
+          gridDelegate:
+              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+          itemCount: 12,
+          itemBuilder: (ctx, index) {
+            return Center(
               child: Blob.random(
-                size: 400,
-                edgesCount: 5,
+                size: 100,
+                edgesCount: 6,
                 minGrowth: 7,
                 controller: blobCtrl,
-                debug: true,
+                styles: BlobStyles(color: Color(0xffd1d8e0)),
+                // debug: true,
               ),
-            ),
-            Button('Randomize', onTap: () {
-              BlobData blobData = blobCtrl.change();
-              print('${blobData.id}');
-            })
-          ],
+            );
+          },
         ),
       ),
     );
   }
 }
+
+// Button('Randomize', onTap: () {
+//   BlobData blobData = blobCtrl.change();
+//   print('${blobData.id}');
+// })

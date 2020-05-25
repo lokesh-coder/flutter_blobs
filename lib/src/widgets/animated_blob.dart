@@ -9,7 +9,7 @@ class AnimatedBlob extends StatefulWidget {
   final double size;
   final bool debug;
   final BlobStyles styles;
-  final String hash;
+  final String id;
   final BlobController ctrl;
   final Widget child;
   final Duration duration;
@@ -23,7 +23,7 @@ class AnimatedBlob extends StatefulWidget {
     this.debug = false,
     this.styles,
     this.ctrl,
-    this.hash,
+    this.id,
     this.duration,
     this.child,
   });

@@ -1,6 +1,5 @@
 import 'package:blobs/blobs.dart';
 import '../../common/app_shell.dart';
-import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class StaticColorExample extends StatelessWidget {
@@ -22,9 +21,9 @@ class StaticColorExample extends StatelessWidget {
                 styles: BlobStyles(color: Color(0xffEAB543)),
               ),
             ),
-            Button('Randomize', onTap: () {
-              blobCtrl.change();
-            })
+            // Button('Randomize', onTap: () {
+            //   blobCtrl.change();
+            // })
           ],
         ),
       ),

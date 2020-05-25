@@ -10,7 +10,7 @@ class StaticChildExample extends StatelessWidget {
   Widget build(BuildContext context) {
     BlobController blobCtrl = BlobController();
     return AppShell(
-      title: 'Static Basic',
+      title: 'Blob with child',
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -18,28 +18,37 @@ class StaticChildExample extends StatelessWidget {
             Container(
               child: Blob.random(
                 size: 400,
+                edgesCount: 6,
+                minGrowth: 9,
                 controller: blobCtrl,
+                styles: BlobStyles(color: Color(0xff574b90)),
                 child: Container(
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.symmetric(
+                    vertical: 20,
+                    horizontal: 40,
+                  ),
                   child: Center(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'I\'m child',
+                          'Quote',
                           style: TextStyle(
                             fontSize: 33,
+                            color: Color(0xfff78fb3),
                             fontWeight: FontWeight.w800,
                           ),
                         ),
-                        Text(
-                          // ignore: lines_longer_than_80_chars
-                          'Circular challenges and opportunities outcomes; initiative dynamic, theory of change because program areas strengthening..',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white60,
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Text(
+                            'The most wasted of days is one without laughter.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white54,
+                            ),
                           ),
                         ),
                       ],
@@ -49,7 +58,8 @@ class StaticChildExample extends StatelessWidget {
               ),
             ),
             Button('Randomize', onTap: () {
-              blobCtrl.change();
+              var f = blobCtrl.change();
+              print(f.id);
             })
           ],
         ),

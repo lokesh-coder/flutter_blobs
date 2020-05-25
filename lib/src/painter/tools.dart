@@ -32,7 +32,7 @@ label(Canvas canvas, String text, Offset offset) {
 
 line(Canvas canvas, Offset start, Offset end) {
   var paint = Paint()
-    ..color = Colors.tealAccent
+    ..color = Color(0xff596275).withOpacity(0.5)
     ..strokeWidth = 3
     ..style = PaintingStyle.stroke
     ..strokeCap = StrokeCap.round;

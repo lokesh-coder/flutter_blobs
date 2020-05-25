@@ -8,9 +8,9 @@ class AppShell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffecf0f1),
+      backgroundColor: Color(0xffffffff),
       appBar: AppBar(
-        backgroundColor: Color(0xffecf0f1),
+        backgroundColor: Color(0xffffffff),
         elevation: 0,
         centerTitle: true,
         title: Text(

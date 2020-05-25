@@ -11,7 +11,7 @@ class BlobAnimator {
   init(Function(List<Offset>) callback) {
     Animation<double> animation = CurvedAnimation(
       parent: animationController,
-      curve: Curves.easeOutBack,
+      curve: Curves.linear,
     );
     pathPoints.asMap().forEach((i, p) {
       tweens.insert(i, []);
@@ -39,10 +39,10 @@ class BlobAnimator {
   morphTo(List<Offset> newPathPoints) {
     tweens.asMap().forEach((i, tween) {
       tween[0].begin = tween[0].end;
-      tween[0].end = newPathPoints[i].dx;
+      tween[0].end = newPathPoints[i].dx + 5;
 
       tween[1].begin = tween[1].end;
-      tween[1].end = newPathPoints[i].dy;
+      tween[1].end = newPathPoints[i].dy + 5;
     });
     animationController.reset();
     animationController.forward();

@@ -1,6 +1,5 @@
 import 'package:blobs/blobs.dart';
 import '../../common/app_shell.dart';
-import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class StaticGradientExample extends StatelessWidget {
@@ -21,14 +20,14 @@ class StaticGradientExample extends StatelessWidget {
                 controller: blobCtrl,
                 styles: BlobStyles(
                   gradient: LinearGradient(
-                    colors: [Color(0xfff79d00), Color(0xff64f38c)],
+                    colors: [Color(0xffe96443), Color(0xff904e95)],
                   ).createShader(Rect.fromLTRB(0, 0, 300, 300)),
                 ),
               ),
             ),
-            Button('Randomize', onTap: () {
-              blobCtrl.change();
-            })
+            // Button('Randomize', onTap: () {
+            //   blobCtrl.change();
+            // })
           ],
         ),
       ),

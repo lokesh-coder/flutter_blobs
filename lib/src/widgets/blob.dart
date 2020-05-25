@@ -16,7 +16,7 @@ class Blob extends StatefulWidget {
   final Widget child;
   final int edgesCount;
   final int minGrowth;
-  final List<String> hash;
+  final List<String> id;
   final Duration duration;
   final bool loop;
   final bool isAnimated;
@@ -32,7 +32,7 @@ class Blob extends StatefulWidget {
     this.controller,
     this.child,
   })  : loop = false,
-        hash = null,
+        id = null,
         duration = null,
         isAnimated = false;
   Blob.animatedRandom({
@@ -48,10 +48,10 @@ class Blob extends StatefulWidget {
     this.controller,
     this.child,
   })  : isAnimated = true,
-        hash = null;
+        id = null;
 
-  Blob.fromHash({
-    @required this.hash,
+  Blob.fromID({
+    @required this.id,
     @required this.size,
     this.debug = false,
     this.styles,
@@ -63,8 +63,8 @@ class Blob extends StatefulWidget {
         duration = null,
         isAnimated = false;
 
-  Blob.animatedFromHash({
-    @required this.hash,
+  Blob.animatedFromID({
+    @required this.id,
     @required this.size,
     this.debug = false,
     this.styles,
@@ -82,19 +82,19 @@ class Blob extends StatefulWidget {
   _BlobState createState() => _BlobState();
 
   BlobData _randomBlobData() {
-    String randomHash = (hash == null || hash.isEmpty) ? null : _randomHash();
+    String randomID = (id == null || id.isEmpty) ? null : _randomID();
     return BlobGenerator(
       edgesCount: edgesCount,
       minGrowth: minGrowth,
       size: Size(size, size),
-      hash: randomHash,
+      id: randomID,
     ).generate();
   }
 
-  String _randomHash() {
+  String _randomID() {
     Blob.count++;
-    if (hash.length == 1) return hash[0];
-    return hash[Blob.count % hash.length];
+    if (id.length == 1) return id[0];
+    return id[Blob.count % id.length];
   }
 }
 

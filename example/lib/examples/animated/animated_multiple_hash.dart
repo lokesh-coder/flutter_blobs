@@ -1,6 +1,5 @@
 import 'package:blobs/blobs.dart';
 import '../../common/app_shell.dart';
-import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedMultipleHashExample extends StatefulWidget {
@@ -26,8 +25,8 @@ class _AnimatedMultipleHashExampleState
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Blob.animatedFromHash(
-                  hash: ['6-3-22556'],
+                Blob.animatedFromID(
+                  id: ['6-6-89116'],
                   styles: BlobStyles(
                     color: Color(0xff596275).withOpacity(0.5),
                     fillType: BlobFillType.stroke,
@@ -35,8 +34,8 @@ class _AnimatedMultipleHashExampleState
                   ),
                   size: 50,
                 ),
-                Blob.animatedFromHash(
-                  hash: ['6-3-90151'],
+                Blob.animatedFromID(
+                  id: ['6-6-157'],
                   size: 50,
                   styles: BlobStyles(
                     color: Color(0xff596275).withOpacity(0.5),
@@ -44,8 +43,8 @@ class _AnimatedMultipleHashExampleState
                     strokeWidth: 2,
                   ),
                 ),
-                Blob.animatedFromHash(
-                  hash: ['6-3-79206'],
+                Blob.animatedFromID(
+                  id: ['6-6-774'],
                   size: 50,
                   styles: BlobStyles(
                     color: Color(0xff596275).withOpacity(0.5),
@@ -57,16 +56,18 @@ class _AnimatedMultipleHashExampleState
             ),
             SizedBox(height: 30),
             Container(
-              child: Blob.animatedFromHash(
-                hash: ['6-3-22556', '6-3-90151', '6-3-79206'],
+              child: Blob.animatedFromID(
+                id: ['6-6-89116', '6-6-157', '6-6-774'],
                 size: 400,
                 controller: blobCtrl,
+                duration: Duration(seconds: 1),
+                loop: true,
                 styles: BlobStyles(color: Color(0xff34ace0)),
               ),
             ),
-            Button('Randomize', onTap: () {
-              blobCtrl.change();
-            })
+            // Button('Randomize', onTap: () {
+            //   blobCtrl.change();
+            // })
           ],
         ),
       ),
