@@ -2,7 +2,8 @@
 
 <br>
 
-<img  src="https://user-images.githubusercontent.com/1754676/82777559-18537280-9e6c-11ea-9257-0a24645c91b0.png"  alt="Blobs"><br>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/1754676/82777559-18537280-9e6c-11ea-9257-0a24645c91b0.png"  alt="Blobs"></p><br>
 
 </h3>
 
