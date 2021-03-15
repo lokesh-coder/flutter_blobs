@@ -25,8 +25,8 @@ class Blob extends StatefulWidget {
 
   Blob.random({
     required this.size,
-    this.edgesCount = BlobConfig.edgesCount as int?,
-    this.minGrowth = BlobConfig.minGrowth as int?,
+    this.edgesCount = BlobConfig.edgesCount,
+    this.minGrowth = BlobConfig.minGrowth,
     this.debug = false,
     this.styles,
     this.controller,
@@ -37,12 +37,12 @@ class Blob extends StatefulWidget {
         isAnimated = false;
   Blob.animatedRandom({
     required this.size,
-    this.edgesCount = BlobConfig.edgesCount as int?,
-    this.minGrowth = BlobConfig.minGrowth as int?,
+    this.edgesCount = BlobConfig.edgesCount,
+    this.minGrowth = BlobConfig.minGrowth,
     this.debug = false,
     this.styles,
     this.duration = const Duration(
-      milliseconds: BlobConfig.animDurationMs as int,
+      milliseconds: BlobConfig.animDurationMs,
     ),
     this.loop = false,
     this.controller,
@@ -69,7 +69,7 @@ class Blob extends StatefulWidget {
     this.debug = false,
     this.styles,
     this.duration = const Duration(
-      milliseconds: BlobConfig.animDurationMs as int,
+      milliseconds: BlobConfig.animDurationMs,
     ),
     this.loop = false,
     this.controller,

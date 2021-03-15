@@ -9,8 +9,8 @@ class BlobClipper extends CustomClipper<Path> {
   final int minGrowth;
   BlobClipper({
     this.id,
-    this.edgesCount = BlobConfig.edgesCount as int,
-    this.minGrowth = BlobConfig.minGrowth as int,
+    this.edgesCount = BlobConfig.edgesCount,
+    this.minGrowth = BlobConfig.minGrowth,
   });
 
   @override
