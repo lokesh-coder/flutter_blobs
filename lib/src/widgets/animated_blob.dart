@@ -9,8 +9,8 @@ class AnimatedBlob extends StatefulWidget {
   final double size;
   final bool debug;
   final BlobStyles styles;
-  final String id;
-  final BlobController ctrl;
+  final String? id;
+  // final BlobController/*!*/ ctrl;
   final Widget child;
   final Duration duration;
   final BlobData fromBlobData;
@@ -18,14 +18,14 @@ class AnimatedBlob extends StatefulWidget {
 
   const AnimatedBlob({
     this.size = 200,
-    this.fromBlobData,
-    this.toBlobData,
+    required this.fromBlobData,
+    required this.toBlobData,
     this.debug = false,
-    this.styles,
-    this.ctrl,
+    required this.styles,
+    // this.ctrl,
     this.id,
-    this.duration,
-    this.child,
+    required this.duration,
+    required this.child,
   });
 
   @override
@@ -34,9 +34,9 @@ class AnimatedBlob extends StatefulWidget {
 
 class _AnimatedBlobState extends State<AnimatedBlob>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  BlobAnimator animator;
-  BlobData data;
+  late final AnimationController _animationController;
+  late BlobAnimator animator;
+  late BlobData data;
 
   @override
   void didUpdateWidget(AnimatedBlob oldWidget) {
@@ -81,7 +81,7 @@ class _AnimatedBlobState extends State<AnimatedBlob>
 
   @override
   void dispose() {
-    if (widget.ctrl != null) widget.ctrl.dispose();
+    // if (widget.ctrl != null) widget.ctrl.dispose();
     _animationController.dispose();
     super.dispose();
   }

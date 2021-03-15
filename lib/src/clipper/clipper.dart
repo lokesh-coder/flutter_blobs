@@ -4,13 +4,13 @@ import 'package:blobs/src/services/blob_generator.dart';
 import 'package:flutter/material.dart';
 
 class BlobClipper extends CustomClipper<Path> {
-  final String id;
+  final String? id;
   final int edgesCount;
   final int minGrowth;
   BlobClipper({
     this.id,
-    this.edgesCount = BlobConfig.edgesCount,
-    this.minGrowth = BlobConfig.minGrowth,
+    this.edgesCount = BlobConfig.edgesCount as int,
+    this.minGrowth = BlobConfig.minGrowth as int,
   });
 
   @override

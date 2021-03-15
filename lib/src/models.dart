@@ -1,3 +1,4 @@
+import 'package:blobs/src/config.dart';
 import 'package:flutter/material.dart';
 
 class BlobData {
@@ -5,20 +6,20 @@ class BlobData {
   num size;
   int edges;
   BlobPoints points;
-  String id;
+  String? id;
   Path path;
-  String svgPath;
+  String? svgPath;
   BlobCurves curves;
 
   BlobData({
-    this.growth,
-    this.size,
-    this.edges,
-    this.points,
-    this.id,
-    this.path,
-    this.svgPath,
-    this.curves,
+    required this.growth,
+    required this.size,
+    required this.edges,
+    required this.points,
+    required this.id,
+    required this.path,
+    required this.svgPath,
+    required this.curves,
   });
 }
 
@@ -33,14 +34,14 @@ enum BlobFillType { fill, stroke }
 
 class BlobStyles {
   Color color;
-  Shader gradient;
+  Shader? gradient;
   int strokeWidth;
   BlobFillType fillType;
   BlobStyles({
-    this.color,
+    this.color = BlobConfig.color,
     this.gradient,
-    this.fillType,
-    this.strokeWidth,
+    this.fillType = BlobConfig.fillType,
+    this.strokeWidth = BlobConfig.strokeWidth,
   });
 }
 
@@ -49,12 +50,12 @@ class BlobPoints {
   List<Offset> destPoints;
   Offset center;
   double innerRad;
-  String id;
+  String? id;
   BlobPoints({
-    this.originPoints,
-    this.destPoints,
-    this.center,
-    this.id,
-    this.innerRad,
+    required this.originPoints,
+    required this.destPoints,
+    required this.center,
+    required this.id,
+    required this.innerRad,
   });
 }

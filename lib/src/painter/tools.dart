@@ -1,4 +1,3 @@
-import 'package:blobs/src/config.dart';
 import 'package:blobs/src/models.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +10,7 @@ circle(Canvas canvas, Size size, num radius) {
   var path = Path();
   path.addOval(Rect.fromCircle(
     center: Offset(size.width / 2, size.height / 2),
-    radius: radius,
+    radius: radius as double,
   ));
   canvas.drawPath(path, paint);
 }
@@ -60,13 +59,13 @@ Paint createPaint(BlobStyles styles) {
     BlobFillType.fill: PaintingStyle.fill,
     BlobFillType.stroke: PaintingStyle.stroke
   };
-  if (styles == null) styles = BlobStyles();
+  // if (styles == null) styles = BlobStyles();
 
   var paint = Paint();
-  paint.color = styles.color ?? BlobConfig.color;
+  paint.color = styles.color;
   paint.shader = styles.gradient;
-  paint.strokeWidth = (styles.strokeWidth ?? BlobConfig.strokeWidth).toDouble();
-  paint.style = fillType[styles.fillType ?? BlobConfig.fillType];
+  paint.strokeWidth = (styles.strokeWidth).toDouble();
+  paint.style = fillType[styles.fillType]!;
 
   return paint;
 }

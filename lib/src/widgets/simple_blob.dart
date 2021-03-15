@@ -11,11 +11,11 @@ class SimpleBlob extends StatelessWidget {
   final BlobStyles styles;
 
   const SimpleBlob({
-    this.blobData,
-    this.size,
-    this.debug,
-    this.styles,
-    this.child,
+    required this.blobData,
+    required this.size,
+    required this.debug,
+    required this.styles,
+    required this.child,
   });
 
   @override

@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:blobs/src/models.dart';
 
 class BlobGenerator {
-  final Size size;
-  int edgesCount;
-  int minGrowth;
+  final Size? size;
+  int? edgesCount;
+  int? minGrowth;
   String svgPath = '';
-  String id;
+  String? id;
   List<List<Offset>> dots = [];
 
   BlobGenerator({
@@ -22,23 +22,23 @@ class BlobGenerator {
 
   BlobData generate() {
     if (id != null) {
-      var datum = id.split('-');
+      var datum = id!.split('-');
       if (datum.length != 3) throw InvalidIDException(id);
       edgesCount = int.parse(datum[0]);
       minGrowth = int.parse(datum[1]);
       id = datum[2];
     }
-    if (edgesCount <= 2) throw InvalidEdgesCountException();
-    var points = _createPoints(id != null ? int.parse(id) : null);
+    if (edgesCount! <= 2) throw InvalidEdgesCountException();
+    var points = _createPoints(id != null ? int.parse(id!) : null);
     BlobCurves curves = _createCurves(points.destPoints);
     Path path = connectPoints(curves);
     return BlobData(
-      edges: edgesCount,
-      growth: minGrowth,
+      edges: edgesCount!,
+      growth: minGrowth!,
       id: points.id,
       path: path,
       points: points,
-      size: size.width,
+      size: size!.width,
       svgPath: svgPath,
       curves: curves,
     );
@@ -64,7 +64,7 @@ class BlobGenerator {
 
   List<double> _divide(num count) {
     double deg = 360 / count;
-    return List.generate(count, (i) => i * deg).toList();
+    return List.generate(count as int, (i) => i * deg).toList();
   }
 
   //  https://stackoverflow.com/a/29450606/3096740
@@ -79,7 +79,7 @@ class BlobGenerator {
 
       num result = (((mz << 16) + (mw & 65535)) & mask) >> 0;
       result /= 4294967296;
-      return result;
+      return result as double;
     };
   }
 
@@ -99,15 +99,15 @@ class BlobGenerator {
     return Offset(x.round().toDouble(), y.round().toDouble());
   }
 
-  BlobPoints _createPoints(int seedValue) {
-    num outerRad = size.width / 2;
-    num innerRad = minGrowth * (outerRad / 10);
-    Offset center = Offset(size.width / 2, size.height / 2);
+  BlobPoints _createPoints(int? seedValue) {
+    num outerRad = size!.width / 2;
+    num innerRad = minGrowth! * (outerRad / 10);
+    Offset center = Offset(size!.width / 2, size!.height / 2);
 
-    List<double> slices = _divide(edgesCount);
-    int randomInt;
+    List<double> slices = _divide(edgesCount!);
+    int? randomInt;
     if (id != null) {
-      seedValue = int.parse(id);
+      seedValue = int.parse(id!);
     } else {
       int maxRandomValue = ([99, 999, 9999, 99999, 999999]..shuffle()).first;
       randomInt = Random().nextInt(maxRandomValue);
@@ -119,7 +119,7 @@ class BlobGenerator {
 
     slices.forEach((degree) {
       double O = _magicPoint(randVal(), innerRad, outerRad);
-      Offset start = _point(center, innerRad, degree);
+      Offset start = _point(center, innerRad as double, degree);
       Offset end = _point(center, O, degree);
       originPoints.add(start);
       destPoints.add(end);
@@ -134,16 +134,16 @@ class BlobGenerator {
   }
 
   BlobPoints _createPointsFromDest(List<Offset> destPoints) {
-    num outerRad = size.width / 2;
-    num innerRad = minGrowth * (outerRad / 10);
-    Offset center = Offset(size.width / 2, size.height / 2);
+    num outerRad = size!.width / 2;
+    num innerRad = minGrowth! * (outerRad / 10);
+    Offset center = Offset(size!.width / 2, size!.height / 2);
 
-    List<double> slices = _divide(edgesCount);
+    List<double> slices = _divide(edgesCount!);
 
     List<Offset> originPoints = [];
 
     slices.forEach((degree) {
-      Offset start = _point(center, innerRad, degree);
+      Offset start = _point(center, innerRad as double, degree);
       originPoints.add(start);
     });
     return BlobPoints(
