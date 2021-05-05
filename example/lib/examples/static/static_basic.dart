@@ -3,7 +3,7 @@ import '../../common/app_shell.dart';
 import 'package:flutter/material.dart';
 
 class StaticBasicExample extends StatelessWidget {
-  const StaticBasicExample({Key key}) : super(key: key);
+  const StaticBasicExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

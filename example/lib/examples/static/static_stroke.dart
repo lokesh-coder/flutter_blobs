@@ -3,7 +3,7 @@ import '../../common/app_shell.dart';
 import 'package:flutter/material.dart';
 
 class StaticStrokeExample extends StatelessWidget {
-  const StaticStrokeExample({Key key}) : super(key: key);
+  const StaticStrokeExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

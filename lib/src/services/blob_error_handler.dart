@@ -1,5 +1,5 @@
 class InvalidIDException implements Exception {
-  final String id;
+  final String? id;
 
   InvalidIDException(this.id);
   @override

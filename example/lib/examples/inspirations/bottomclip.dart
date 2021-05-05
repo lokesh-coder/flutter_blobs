@@ -3,7 +3,7 @@ import '../../common/app_shell.dart';
 import 'package:flutter/material.dart';
 
 class BottomClipInspirationExample extends StatelessWidget {
-  const BottomClipInspirationExample({Key key}) : super(key: key);
+  const BottomClipInspirationExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class MyClipper extends CustomClipper<Path> {
 
     var sqPath = Path()
       ..addRect(Rect.fromLTWH(0, 0, size.width, size.height / 2));
-    var blobPath = connectPoints(blobData.curves);
+    var blobPath = connectPoints(blobData.curves!);
 
     return Path.combine(PathOperation.union, blobPath, sqPath);
   }

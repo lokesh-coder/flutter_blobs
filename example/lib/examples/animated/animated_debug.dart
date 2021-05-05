@@ -4,7 +4,7 @@ import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedDebugExample extends StatelessWidget {
-  const AnimatedDebugExample({Key key}) : super(key: key);
+  const AnimatedDebugExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

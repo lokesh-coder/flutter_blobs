@@ -4,7 +4,7 @@ import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class StaticClipperExample extends StatefulWidget {
-  const StaticClipperExample({Key key}) : super(key: key);
+  const StaticClipperExample({Key? key}) : super(key: key);
 
   @override
   _StaticClipperExampleState createState() => _StaticClipperExampleState();

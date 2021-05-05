@@ -4,7 +4,7 @@ import '../../common/app_shell.dart';
 import '../../common/button.dart';
 
 class AnimatedChildExample extends StatelessWidget {
-  const AnimatedChildExample({Key key}) : super(key: key);
+  const AnimatedChildExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,7 @@ import 'package:blobs/src/services/blob_generator.dart';
 import 'package:flutter/material.dart';
 
 class BlobClipper extends CustomClipper<Path> {
-  final String id;
+  final String? id;
   final int edgesCount;
   final int minGrowth;
   BlobClipper({
@@ -21,7 +21,7 @@ class BlobClipper extends CustomClipper<Path> {
       minGrowth: minGrowth,
       size: size,
     ).generate();
-    return connectPoints(blobData.curves);
+    return connectPoints(blobData.curves!);
   }
 
   @override

@@ -2,7 +2,7 @@ import 'package:blobs/src/config.dart';
 import 'package:blobs/src/models.dart';
 import 'package:flutter/material.dart';
 
-circle(Canvas canvas, Size size, num radius) {
+circle(Canvas canvas, Size size, double radius) {
   var paint = Paint()
     ..color = const Color(0xffef5777)
     ..strokeWidth = 3
@@ -55,7 +55,7 @@ point(Canvas canvas, Offset center) {
   canvas.drawPath(path, paint);
 }
 
-Paint createPaint(BlobStyles styles) {
+Paint createPaint(BlobStyles? styles) {
   Map<BlobFillType, PaintingStyle> fillType = {
     BlobFillType.fill: PaintingStyle.fill,
     BlobFillType.stroke: PaintingStyle.stroke
@@ -66,7 +66,7 @@ Paint createPaint(BlobStyles styles) {
   paint.color = styles.color ?? BlobConfig.color;
   paint.shader = styles.gradient;
   paint.strokeWidth = (styles.strokeWidth ?? BlobConfig.strokeWidth).toDouble();
-  paint.style = fillType[styles.fillType ?? BlobConfig.fillType];
+  paint.style = fillType[styles.fillType ?? BlobConfig.fillType]!;
 
   return paint;
 }
@@ -82,7 +82,7 @@ Path connectPoints(BlobCurves curves) {
   return path;
 }
 
-void drawBlob(Canvas canvas, Path path, BlobStyles styles) {
+void drawBlob(Canvas canvas, Path path, BlobStyles? styles) {
   Paint paint = createPaint(styles);
   // canvas.drawShadow(path, Colors.red.withOpacity(0.8), 10, true);
   canvas.drawPath(path, paint);
