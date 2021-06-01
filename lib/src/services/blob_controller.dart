@@ -1,15 +1,15 @@
 import 'package:blobs/src/models.dart';
 
 class BlobController {
-  BlobData Function() _listener;
+  BlobData? Function()? _listener;
   BlobController();
-  onChange(BlobData Function() ex) {
+  onChange(BlobData? Function() ex) {
     _listener = ex;
   }
 
-  BlobData change() {
+  BlobData? change() {
     if (_listener == null) return BlobData();
-    return _listener();
+    return _listener!();
   }
 
   dispose() {
