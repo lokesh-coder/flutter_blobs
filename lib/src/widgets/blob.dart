@@ -11,20 +11,20 @@ import 'package:flutter/material.dart';
 class Blob extends StatefulWidget {
   final double size;
   final bool debug;
-  final BlobStyles styles;
-  final BlobController controller;
-  final Widget child;
-  final int edgesCount;
-  final int minGrowth;
-  final List<String> id;
-  final Duration duration;
+  final BlobStyles? styles;
+  final BlobController? controller;
+  final Widget? child;
+  final int? edgesCount;
+  final int? minGrowth;
+  final List<String>? id;
+  final Duration? duration;
   final bool loop;
   final bool isAnimated;
 
   static int count = 0;
 
   Blob.random({
-    @required this.size,
+    required this.size,
     this.edgesCount = BlobConfig.edgesCount,
     this.minGrowth = BlobConfig.minGrowth,
     this.debug = false,
@@ -36,7 +36,7 @@ class Blob extends StatefulWidget {
         duration = null,
         isAnimated = false;
   Blob.animatedRandom({
-    @required this.size,
+    required this.size,
     this.edgesCount = BlobConfig.edgesCount,
     this.minGrowth = BlobConfig.minGrowth,
     this.debug = false,
@@ -51,8 +51,8 @@ class Blob extends StatefulWidget {
         id = null;
 
   Blob.fromID({
-    @required this.id,
-    @required this.size,
+    required this.id,
+    required this.size,
     this.debug = false,
     this.styles,
     this.controller,
@@ -64,8 +64,8 @@ class Blob extends StatefulWidget {
         isAnimated = false;
 
   Blob.animatedFromID({
-    @required this.id,
-    @required this.size,
+    required this.id,
+    required this.size,
     this.debug = false,
     this.styles,
     this.duration = const Duration(
@@ -82,7 +82,7 @@ class Blob extends StatefulWidget {
   _BlobState createState() => _BlobState();
 
   BlobData _randomBlobData() {
-    String randomID = (id == null || id.isEmpty) ? null : _randomID();
+    String? randomID = (id == null || id!.isEmpty) ? null : _randomID();
     return BlobGenerator(
       edgesCount: edgesCount,
       minGrowth: minGrowth,
@@ -93,15 +93,15 @@ class Blob extends StatefulWidget {
 
   String _randomID() {
     Blob.count++;
-    if (id.length == 1) return id[0];
-    return id[Blob.count % id.length];
+    if (id!.length == 1) return id![0];
+    return id![Blob.count % id!.length];
   }
 }
 
 class _BlobState extends State<Blob> {
-  BlobData blobData;
-  BlobData fromBlobData;
-  Timer timer;
+  BlobData? blobData;
+  BlobData? fromBlobData;
+  Timer? timer;
 
   @override
   void initState() {
@@ -109,11 +109,11 @@ class _BlobState extends State<Blob> {
     _updateBlob();
     if (widget.loop) {
       timer = Timer.periodic(
-        Duration(milliseconds: widget.duration.inMilliseconds),
+        Duration(milliseconds: widget.duration!.inMilliseconds),
         (_) => _updateBlob(),
       );
     } else if (widget.controller != null) {
-      widget.controller.onChange(_updateBlob);
+      widget.controller!.onChange(_updateBlob);
     }
   }
 
@@ -121,7 +121,7 @@ class _BlobState extends State<Blob> {
   Widget build(BuildContext context) {
     if (!widget.isAnimated) {
       return SimpleBlob(
-        blobData: blobData,
+        blobData: blobData!,
         size: widget.size,
         styles: widget.styles,
         debug: widget.debug,
@@ -130,7 +130,7 @@ class _BlobState extends State<Blob> {
     }
     return AnimatedBlob(
       fromBlobData: fromBlobData,
-      toBlobData: blobData,
+      toBlobData: blobData!,
       size: widget.size,
       styles: widget.styles,
       debug: widget.debug,
@@ -145,13 +145,13 @@ class _BlobState extends State<Blob> {
     }
     blobData = widget._randomBlobData();
     setState(() {});
-    return blobData;
+    return blobData!;
   }
 
   @override
   void dispose() {
-    if (timer != null) timer.cancel();
-    if (widget.controller != null) widget.controller.dispose();
+    if (timer != null) timer!.cancel();
+    if (widget.controller != null) widget.controller!.dispose();
     super.dispose();
   }
 }

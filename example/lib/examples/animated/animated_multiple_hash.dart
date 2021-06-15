@@ -3,7 +3,7 @@ import '../../common/app_shell.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedMultipleHashExample extends StatefulWidget {
-  const AnimatedMultipleHashExample({Key key}) : super(key: key);
+  const AnimatedMultipleHashExample({Key? key}) : super(key: key);
 
   @override
   _AnimatedMultipleHashExampleState createState() =>
@@ -12,7 +12,7 @@ class AnimatedMultipleHashExample extends StatefulWidget {
 
 class _AnimatedMultipleHashExampleState
     extends State<AnimatedMultipleHashExample> {
-  Color clr;
+  Color? clr;
   @override
   Widget build(BuildContext context) {
     BlobController blobCtrl = BlobController();

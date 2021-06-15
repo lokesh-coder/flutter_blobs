@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppShell extends StatelessWidget {
   final String title;
-  final Widget child;
-  const AppShell({Key key, this.title, this.child}) : super(key: key);
+  final Widget? child;
+  const AppShell({Key? key, required this.title, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

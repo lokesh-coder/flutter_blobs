@@ -4,7 +4,7 @@ import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class StaticHashExample extends StatelessWidget {
-  const StaticHashExample({Key key}) : super(key: key);
+  const StaticHashExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

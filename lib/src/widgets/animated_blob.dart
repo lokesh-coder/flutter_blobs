@@ -8,18 +8,18 @@ import 'package:flutter/material.dart';
 class AnimatedBlob extends StatefulWidget {
   final double size;
   final bool debug;
-  final BlobStyles styles;
-  final String id;
-  final BlobController ctrl;
-  final Widget child;
-  final Duration duration;
-  final BlobData fromBlobData;
+  final BlobStyles? styles;
+  final String? id;
+  final BlobController? ctrl;
+  final Widget? child;
+  final Duration? duration;
+  final BlobData? fromBlobData;
   final BlobData toBlobData;
 
   const AnimatedBlob({
     this.size = 200,
     this.fromBlobData,
-    this.toBlobData,
+    required this.toBlobData,
     this.debug = false,
     this.styles,
     this.ctrl,
@@ -34,9 +34,9 @@ class AnimatedBlob extends StatefulWidget {
 
 class _AnimatedBlobState extends State<AnimatedBlob>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  BlobAnimator animator;
-  BlobData data;
+  late AnimationController _animationController;
+  late BlobAnimator animator;
+  late BlobData data;
 
   @override
   void didUpdateWidget(AnimatedBlob oldWidget) {
@@ -51,7 +51,7 @@ class _AnimatedBlobState extends State<AnimatedBlob>
         AnimationController(duration: widget.duration, vsync: this);
     animator = BlobAnimator(
         animationController: _animationController,
-        pathPoints: widget.toBlobData.points.destPoints);
+        pathPoints: widget.toBlobData.points!.destPoints!);
     animator.init((o) {
       setState(() {
         data = BlobGenerator(
@@ -65,7 +65,7 @@ class _AnimatedBlobState extends State<AnimatedBlob>
   }
 
   setNewValue() {
-    animator.morphTo(widget.toBlobData.points.destPoints);
+    animator.morphTo(widget.toBlobData.points!.destPoints!);
   }
 
   @override
@@ -81,7 +81,7 @@ class _AnimatedBlobState extends State<AnimatedBlob>
 
   @override
   void dispose() {
-    if (widget.ctrl != null) widget.ctrl.dispose();
+    if (widget.ctrl != null) widget.ctrl!.dispose();
     _animationController.dispose();
     super.dispose();
   }

@@ -24,7 +24,7 @@ import 'inspirations/frame.dart';
 import 'inspirations/bottomclip.dart';
 
 class Examples extends StatelessWidget {
-  const Examples({Key key}) : super(key: key);
+  const Examples({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

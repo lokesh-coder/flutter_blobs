@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../common/app_shell.dart';
 
 class RotateInpirationExample extends StatefulWidget {
-  const RotateInpirationExample({Key key}) : super(key: key);
+  const RotateInpirationExample({Key? key}) : super(key: key);
 
   @override
   _RotateInpirationExampleState createState() =>
@@ -13,8 +13,8 @@ class RotateInpirationExample extends StatefulWidget {
 
 class _RotateInpirationExampleState extends State<RotateInpirationExample>
     with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  Animation animation;
+  late AnimationController _animationController;
+  late Animation animation;
 
   @override
   void initState() {

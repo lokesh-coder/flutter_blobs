@@ -4,16 +4,16 @@ import 'package:blobs/src/painter/painter.dart';
 import 'package:flutter/material.dart';
 
 class SimpleBlob extends StatelessWidget {
-  final double size;
+  final double? size;
   final BlobData blobData;
   final bool debug;
-  final Widget child;
-  final BlobStyles styles;
+  final Widget? child;
+  final BlobStyles? styles;
 
   const SimpleBlob({
-    this.blobData,
+    required this.blobData,
     this.size,
-    this.debug,
+    this.debug = false,
     this.styles,
     this.child,
   });

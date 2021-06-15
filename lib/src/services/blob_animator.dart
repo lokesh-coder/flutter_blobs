@@ -6,7 +6,7 @@ class BlobAnimator {
   List<List<Tween>> tweens = [];
   List<List<Animation>> anims = [];
 
-  BlobAnimator({this.pathPoints, this.animationController});
+  BlobAnimator({required this.pathPoints, required this.animationController});
 
   init(Function(List<Offset>) callback) {
     Animation<double> animation = CurvedAnimation(

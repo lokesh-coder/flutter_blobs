@@ -4,7 +4,7 @@ import '../../common/button.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedGradientExample extends StatelessWidget {
-  const AnimatedGradientExample({Key key}) : super(key: key);
+  const AnimatedGradientExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

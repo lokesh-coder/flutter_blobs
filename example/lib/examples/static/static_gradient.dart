@@ -3,7 +3,7 @@ import '../../common/app_shell.dart';
 import 'package:flutter/material.dart';
 
 class StaticGradientExample extends StatelessWidget {
-  const StaticGradientExample({Key key}) : super(key: key);
+  const StaticGradientExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -3,7 +3,7 @@ import '../../common/app_shell.dart';
 import 'package:flutter/material.dart';
 
 class StaticColorExample extends StatelessWidget {
-  const StaticColorExample({Key key}) : super(key: key);
+  const StaticColorExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

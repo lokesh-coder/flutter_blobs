@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 }
 
 class BasicExample extends StatelessWidget {
-  const BasicExample({Key key}) : super(key: key);
+  const BasicExample({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
