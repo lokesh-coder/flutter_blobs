@@ -106,7 +106,7 @@ You can use `BlobController`, if you want to change the shape programatically. A
 
 ```dart
 
-BlobConroller blobCtrl =  BlobController();
+BlobController blobCtrl =  BlobController();
 
 ```
 
