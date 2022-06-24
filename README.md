@@ -34,7 +34,7 @@
 <div class="highlight highlight-source-shell">
 <pre>
 <div align="center"><strong >Blobs App</strong></div>
-<div align="center"><a align="center" href="https://blobs.app/">https://blobs.app/</a></div>
+<div align="center"><a align="center" href="https://lokesh-coder.github.io/blobs.app">https://lokesh-coder.github.io/blobs.app</a></div>
 </pre>
 </div>
 
