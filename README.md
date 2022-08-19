@@ -225,6 +225,7 @@ Blob.animatedRandom(
  size:200,
  edgesCount:5,
  minGrowth:4,
+ animationCurve:Curves.easeInOutCubic,
  duration:  Duration(milliseconds:500),
 ),
 
@@ -246,7 +247,6 @@ Blob.animatedRandom(
  size:200,
  edgesCount:5,
  minGrowth:4,
- animationCurve:Curves.easeInOutCubic,
  loop:  true,
 ),
 
