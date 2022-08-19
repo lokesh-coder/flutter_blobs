@@ -15,6 +15,7 @@ class AnimatedBlob extends StatefulWidget {
   final Duration? duration;
   final BlobData? fromBlobData;
   final BlobData toBlobData;
+  final Curve? animationCurve;
 
   const AnimatedBlob({
     this.size = 200,
@@ -26,6 +27,7 @@ class AnimatedBlob extends StatefulWidget {
     this.id,
     this.duration,
     this.child,
+    this.animationCurve
   });
 
   @override
@@ -51,7 +53,8 @@ class _AnimatedBlobState extends State<AnimatedBlob>
         AnimationController(duration: widget.duration, vsync: this);
     animator = BlobAnimator(
         animationController: _animationController,
-        pathPoints: widget.toBlobData.points!.destPoints!);
+        pathPoints: widget.toBlobData.points!.destPoints!,
+        animationCurve: widget.animationCurve);
     animator.init((o) {
       setState(() {
         data = BlobGenerator(
