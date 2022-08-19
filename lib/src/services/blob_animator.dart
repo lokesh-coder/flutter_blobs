@@ -5,13 +5,14 @@ class BlobAnimator {
   AnimationController animationController;
   List<List<Tween>> tweens = [];
   List<List<Animation>> anims = [];
+  final Curve? animationCurve;
 
-  BlobAnimator({required this.pathPoints, required this.animationController});
+  BlobAnimator({required this.pathPoints, required this.animationController, this.animationCurve = Curves.linear});
 
   init(Function(List<Offset>) callback) {
     Animation<double> animation = CurvedAnimation(
       parent: animationController,
-      curve: Curves.linear,
+      curve: animationCurve!,
     );
     pathPoints.asMap().forEach((i, p) {
       tweens.insert(i, []);

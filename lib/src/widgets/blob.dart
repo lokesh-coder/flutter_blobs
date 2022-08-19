@@ -20,6 +20,7 @@ class Blob extends StatefulWidget {
   final Duration? duration;
   final bool loop;
   final bool isAnimated;
+  final Curve? animationCurve;
 
   static int count = 0;
 
@@ -34,7 +35,8 @@ class Blob extends StatefulWidget {
   })  : loop = false,
         id = null,
         duration = null,
-        isAnimated = false;
+        isAnimated = false,
+        animationCurve = null;
   Blob.animatedRandom({
     required this.size,
     this.edgesCount = BlobConfig.edgesCount,
@@ -47,6 +49,7 @@ class Blob extends StatefulWidget {
     this.loop = false,
     this.controller,
     this.child,
+    this.animationCurve = Curves.easeInOutCubic,
   })  : isAnimated = true,
         id = null;
 
@@ -61,7 +64,8 @@ class Blob extends StatefulWidget {
         edgesCount = null,
         minGrowth = null,
         duration = null,
-        isAnimated = false;
+        isAnimated = false,
+        animationCurve = null;
 
   Blob.animatedFromID({
     required this.id,
@@ -74,6 +78,7 @@ class Blob extends StatefulWidget {
     this.loop = false,
     this.controller,
     this.child,
+    this.animationCurve = Curves.easeInOutCubic,
   })  : isAnimated = true,
         edgesCount = null,
         minGrowth = null;
@@ -136,6 +141,7 @@ class _BlobState extends State<Blob> {
       debug: widget.debug,
       duration: widget.duration,
       child: widget.child,
+      animationCurve: widget.animationCurve,
     );
   }
 

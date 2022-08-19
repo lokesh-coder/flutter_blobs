@@ -19,6 +19,7 @@ class AnimatedLoopExample extends StatelessWidget {
                 loop: true,
                 edgesCount: 6,
                 minGrowth: 7,
+                animationCurve: Curves.easeInOutCubic,
                 duration: Duration(milliseconds: 1500),
                 styles: BlobStyles(color: Color(0xffB33771)),
               ),
