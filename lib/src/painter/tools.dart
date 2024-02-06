@@ -67,6 +67,9 @@ Paint createPaint(BlobStyles? styles) {
   paint.shader = styles.gradient;
   paint.strokeWidth = (styles.strokeWidth ?? BlobConfig.strokeWidth).toDouble();
   paint.style = fillType[styles.fillType ?? BlobConfig.fillType]!;
+  if (styles.blendMode != null) {
+    paint.blendMode = styles.blendMode!;
+  }
 
   return paint;
 }

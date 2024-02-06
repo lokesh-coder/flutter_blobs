@@ -36,11 +36,13 @@ class BlobStyles {
   Shader? gradient;
   int? strokeWidth;
   BlobFillType? fillType;
+  BlendMode? blendMode;
   BlobStyles({
     this.color,
     this.gradient,
     this.fillType,
     this.strokeWidth,
+    this.blendMode,
   });
 }
 
